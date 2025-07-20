@@ -14,7 +14,7 @@ const Contact = () => {
     e.preventDefault();
     setStatus('Sending...');
     try {
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await axios.post('https://portfolio-backend-znal.onrender.com', formData);
       setStatus('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
