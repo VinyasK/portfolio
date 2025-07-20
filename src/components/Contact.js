@@ -14,7 +14,7 @@ const Contact = () => {
     e.preventDefault();
     setStatus('Sending...');
     try {
-      await axios.post('https://portfolio-backend-znal.onrender.com', formData);
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, formData);
       setStatus('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
